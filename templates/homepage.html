@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bosh sahifa</title>
+</head>
+<body>
+{% if Rahbariyat %}
+{% for rahbar in Rahbariyat %}
+    <h4><i>Xodim: </i>{{ rahbar.full_name}}</h4>
+    <i>Tug`ilgan yili: </i><p>{{rahbar.birth_date}}</p>
+    <i>Lavozimi: </i><p>{{rahbar.lavozimi}}</p>
+    <i>Bitirgan oliygohi: </i><p>{{rahbar.tamomlagan_oliygohi}}</p>
+    <i>Toifasi: </i><p>{{rahbar.toifa}}</p>
+    <p>{{rahbar.image}}</p>
+    <i>Yutuqlari: </i><p>{{rahbar.yutuqlari}}</p>
+{% endfor %}
+{% endif %}
+{% if Tadbirlar %}
+{% for tadbir in Tadbirlar %}
+    <h4><i>Tadbir utgan nomi: </i>{{ tadbir.name}}</h4>
+    <i>Tadbirdan lavhalar: </i><p>{{tadbir.images}}</p>
+    <i>Tadbir bayoni: </i><p>{{tadbir.text}}</p>
+    <i>Tadbir utgan sanasi: </i><p>{{tadbir.sanasi}}</p>
+{% endfor %}
+{% endif %}
+</body>
+</html>

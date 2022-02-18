@@ -1,0 +1,7 @@
+db.sqlite3
+media/
+myvenv/
+migrations/
+.env
+__pycache__/
+static/
